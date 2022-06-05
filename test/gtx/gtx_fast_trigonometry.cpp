@@ -13,6 +13,9 @@
 #include <cstdio>
 #include <vector>
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+
 namespace fastCos
 {
 	int perf(bool NextFloat)

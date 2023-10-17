@@ -209,19 +209,19 @@ namespace detail
 		m *= glm::translate(translation);
 		m *= glm::mat4_cast(orientation);
 
-		if (skew.x) {
+		if (bool(skew.x)) {
 			glm::mat4 tmp { 1.f };
 			tmp[2][1] = skew.x;
 			m *= tmp;
 		}
 
-		if (skew.y) {
+		if (bool(skew.y)) {
 			glm::mat4 tmp { 1.f };
 			tmp[2][0] = skew.y;
 			m *= tmp;
 		}
 
-		if (skew.z) {
+		if (bool(skew.z)) {
 			glm::mat4 tmp { 1.f };
 			tmp[1][0] = skew.z;
 			m *= tmp;

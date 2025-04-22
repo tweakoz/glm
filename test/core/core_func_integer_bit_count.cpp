@@ -171,7 +171,8 @@ int errors;
 void error(int x, int y)
 {
 	errors = errors + 1;
-	std::printf("Error for x = %08x, got %08x\n", x, y);
+        using uint_t = unsigned int;
+	std::printf("Error for x = %08x, got %08x\n", uint_t(x), uint_t(y));
 }
 
 int main()

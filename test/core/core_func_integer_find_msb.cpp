@@ -298,7 +298,8 @@ int errors;
 void error(int x, int y)
 {
 	errors = errors + 1;
-	std::printf("Error for x = %08x, got %d\n", x, y);
+        using uint_t = unsigned int;
+	std::printf("Error for x = %08x, got %d\n", uint_t(x), y);
 }
 
 int main()

@@ -252,7 +252,7 @@ int ntz11 (unsigned int n) {
    };
    unsigned int k;
    n = n & (-n);        /* isolate lsb */
-   printf("n = %d\n", n);
+   printf("n = %d\n", int(n));
 #if defined(SLOW_MUL)
    k = (n << 11) - n;
    k = (k <<  2) + k;
@@ -267,7 +267,8 @@ int ntz11 (unsigned int n) {
 int errors;
 void error(int x, int y) {
    errors = errors + 1;
-   std::printf("Error for x = %08x, got %d\n", x, y);
+   using uint_t = unsigned int;
+   std::printf("Error for x = %08x, got %d\n", uint_t(x), y);
 }
 
 int main()

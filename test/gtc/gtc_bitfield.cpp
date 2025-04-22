@@ -103,11 +103,11 @@ namespace mask
 		std::clock_t TimeZero = Timestamp5 - Timestamp4;
 		std::clock_t TimeHalf = Timestamp6 - Timestamp5;
 
-		std::printf("mask[mix]: %d\n", static_cast<unsigned int>(TimeMix));
-		std::printf("mask[loop]: %d\n", static_cast<unsigned int>(TimeLoop));
-		std::printf("mask[default]: %d\n", static_cast<unsigned int>(TimeDefault));
-		std::printf("mask[zero]: %d\n", static_cast<unsigned int>(TimeZero));
-		std::printf("mask[half]: %d\n", static_cast<unsigned int>(TimeHalf));
+		std::printf("mask[mix]: %u\n", static_cast<unsigned int>(TimeMix));
+		std::printf("mask[loop]: %u\n", static_cast<unsigned int>(TimeLoop));
+		std::printf("mask[default]: %u\n", static_cast<unsigned int>(TimeDefault));
+		std::printf("mask[zero]: %u\n", static_cast<unsigned int>(TimeZero));
+		std::printf("mask[half]: %u\n", static_cast<unsigned int>(TimeHalf));
 
 		return TimeDefault < TimeLoop ? 0 : 1;
 	}

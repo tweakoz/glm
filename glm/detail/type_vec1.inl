@@ -522,7 +522,7 @@ namespace glm
 	GLM_FUNC_QUALIFIER GLM_CONSTEXPR vec<1, T, Q> operator~(vec<1, T, Q> const& v)
 	{
 		return vec<1, T, Q>(
-			~v.x);
+			static_cast<T>(~v.x));
 	}
 
 	// -- Boolean operators --

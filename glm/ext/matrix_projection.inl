@@ -92,7 +92,7 @@ namespace glm
 		mat<4, 4, T, Q> Result(static_cast<T>(1));
 
 		if(!(delta.x > static_cast<T>(0) && delta.y > static_cast<T>(0)))
-			return Result; // Error
+			return mat<4, 4, T, Q>(static_cast<T>(1)); // Error
 
 		vec<3, T, Q> Temp(
 			(static_cast<T>(viewport[2]) - static_cast<T>(2) * (center.x - static_cast<T>(viewport[0]))) / delta.x,

@@ -19,7 +19,7 @@ namespace detail
 				std::numeric_limits<genFIType>::is_iec559 || std::numeric_limits<genFIType>::is_signed,
 				"'abs' only accept floating-point and integer scalar or vector inputs");
 
-			return x >= genFIType(0) ? x : -x;
+			return x >= genFIType(0) ? x : static_cast<genFIType>(-x);
 			// TODO, perf comp with: *(((int *) &x) + 1) &= 0x7fffffff;
 		}
 	};
